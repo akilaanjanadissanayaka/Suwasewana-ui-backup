@@ -1,0 +1,55 @@
+.calendar-container{
+  font-size: 65%;
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+}
+.month{
+  width: 100%;
+  height: 3rem;
+  background-color: #167e56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
+}
+.prev{
+  margin-left: 20px;
+}
+.next{
+  margin-right: 20px;
+}
+.month i{
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+.month h1{
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.1rem;
+}
+.month p{
+  font-size: 0.6rem;
+}
+.weekdays{
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.weekdays div:nth-child(1){
+  margin-left: 10px;
+}
+.weekdays div:nth-last-child(){
+  margin-right: 10PX;
+}
+.weekdays div{
+  font-size: 1.5rem;
+  width: calc(20vw/7);
+  border: 1px solid black;
+  margin: auto;
+}
