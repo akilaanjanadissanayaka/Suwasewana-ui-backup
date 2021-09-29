@@ -1,0 +1,357 @@
+
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lstyle.css"/>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <script src="https://unpkg.com/feather-icons"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="script.js" ></script>
+</head>
+<body>
+<div class="login">
+    <div class="container">
+        <!-- <%--left division --%> -->
+        <div class="left">
+            <!-- <%--logo container--%> -->
+            <div class="logo">
+                <img src="../images/logo/logo.png" />
+
+            </div>
+            <!-- <%--logo container--%> -->
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i data-feather="check-circle"></i>
+                    </div>
+                    <span> Government Announcement </span>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i data-feather="check-circle"></i>
+                    </div>
+                    <span> Clinic Schedule </span>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i data-feather="check-circle"></i>
+                    </div>
+                    <span> PHI's  Announcement </span>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i data-feather="check-circle"></i>
+                    </div>
+                    <span> Diseases Information </span>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i data-feather="check-circle"></i>
+                    </div>
+                    <span> Medicine Reminders </span>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i data-feather="check-circle"></i>
+                    </div>
+                    <span> Emergency Ambulance </span>
+                </div>
+            </div>
+            <!-- <%--                login svg image comtaienr    --%> -->
+            <div class="login-image">
+                <img src="../images/svg/login/image1.jpg" />
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- <%--                lofin form container--%> -->
+        <div class="right">
+            <div class="ur-maincontainer">
+        
+                <div class="reg-form" style="padding-left: 2px;">
+                    
+                    <form action="#" id="form" method="GET" onsubmit="return Checkall()" >
+                        <div class="top">
+                            <div class="reg-title"><h1>Registration</h1></div>
+                        </div>
+                        
+                        <hr>
+                        <div class="name-row">
+                            <div class="first-name">
+                                <p>First Name</p>  
+                                <input type="text" name="fname" id="input_fname"
+                                    onblur="validation.nameValidation(
+                                        document.getElementById('input_fname').value,
+                                        'user-fname-error'
+                                    );"
+                                    onkeyup="validation.nameValidation(
+                                        document.getElementById('input_fname').value,
+                                        'user-fname-error'
+                                    );"
+                                >
+                                <small id="user-fname-error"></small>
+                            </div>
+                            <div class="last-name">
+                                <div>
+                                    <p>Last Name</p>  
+                                    <input type="text" name="lname" id="input_lname"
+                                        onblur="validation.nameValidation(
+                                            document.getElementById('input_lname').value,
+                                            'user-lname-error'
+                                        );"
+                                        onkeyup="validation.nameValidation(
+                                            document.getElementById('input_lname').value,
+                                            'user-lname-error'
+                                        );"
+                                    >
+                                    <small id="user-lname-error"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-NIC">
+                            <div class="mobile">
+                                <p>Mobile</p>
+                                <input type="text" name="mobile" id="input_mobile"
+                                    onkeyup="validation.mobileValidation(
+                                    document.getElementById('input_mobile').value,
+                                    'user-mobile-error'
+                                );"
+                                > 
+                                <small id="user-mobile-error"></small>
+                            </div>
+                            <div class="NIC">
+                                <p>NIC</p>
+                                <input type="text" name="nic" id="input_nic" onblur="validation.nicValidation(
+                                    document.getElementById('input_nic'),
+                                    'user-nic-error')
+                                ;"> 
+                                <small id="user-nic-error"></small>
+                            </div>
+                        </div>
+                        <div class="location">
+                            <div class="province">
+                                <select name="" id="SelectProvince" name="province" 
+                                onblur="validation.selectValidation(
+                                            document.getElementById('SelectProvince')
+                                        );"> 
+                                    <option value="1" >SProvince</option>
+                                </select>
+                            </div>
+                            <div class="district">
+                                <select name="" id="SelectDistrict" name="district"
+                                onblur="validation.selectValidation(
+                                            document.getElementById('SelectDistrict')
+                                        );"
+                                >
+                                    <option value="1">District</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="city-moh">
+                            <div class="city">
+                                <select name="" id="Selectcity" style="size: '2';" name="city"
+                                onblur="validation.selectValidation(
+                                            document.getElementById('Selectcity')
+                                        );"
+                                >
+                                    <option value="1">City</option>
+                                </select>
+                            </div>
+                            <div class="moh">
+                                <select name="" id="SelectMoh" name="moh"
+                                onblur="validation.selectValidation(
+                                            document.getElementById('SelectMoh')
+                                        );"
+                                >
+                                    <option value="1">Select Ur MOH Area</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="map-container">
+                            <div class="map">
+                                
+                                <div id="mapid"></div>
+                            </div>
+                        </div>
+                        <div class="password">
+                            <div class="pass1">
+                                <p>Password</p>
+                                <input type="password" name="password" id="input_password" onfocus="validation.CheckPassword();">
+                                <small id="password_error"></small>
+                            </div>
+                            <div class="conform-pass">
+                                <p>Conform Password</p>
+                                <input type="password" name="conpassword" id="input_con_password" onblur="
+                                    validation.CheckConformPassword(
+                                        document.getElementById('input_password'),
+                                        document.getElementById('input_con_password'),
+                                        'password_error'
+                                    );">
+                                <div id="showpassword">
+                                    <input type="checkbox" id="showpass" name="show-password" value="1" 
+                                        onchange="showpassward()">
+                                        <label id="password_lable" > Show Password</label><br>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+                        <div class="next-step">
+                            <button class="next-step-btn" type="submit" > <div>Register </div> </button>
+                        </div>
+                        <div class="signin">
+                            <p>Already have an account ?   <span>Sign in</span> </p> 
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script defer>
+    let validation=new FormInputValidation();
+
+    function showpassward() {
+        let pass1=document.getElementById("input_password");
+        let pass2=document.getElementById("input_con_password");
+        let lable=document.getElementById("password_lable");
+        if(pass1.type==="password"){
+            pass1.type="text";
+            pass2.type="text";
+            lable.innerHTML="Don't show password"
+        }
+        else{
+            pass1.type="password";
+            pass2.type="password";
+            lable.innerHTML="Show password"
+        }
+    }
+
+    function Checkall(){
+        // console.log("fname "+validation.nameValidation(
+        //                                 document.getElementById('input_fname').value,
+        //                                 'user-fname-error'
+        //                             )
+        //             )
+        // console.log("lname "+validation.nameValidation(
+        //                                     document.getElementById('input_lname').value,
+        //                                     'user-lname-error'
+        //                                 ))
+        // console.log("mobile "+ validation.mobileValidation(
+        //                             document.getElementById('input_mobile').value,
+        //                             'user-mobile-error'
+        //                         ))
+        // console.log("nic "+ validation.nicValidation(
+        //                             document.getElementById('input_nic'),
+        //                             'user-nic-error'))
+        // console.log("pro "+ validation.selectValidation(
+        //                                     document.getElementById('SelectProvince')
+        //                                 ))
+        // console.log("dis "+validation.selectValidation(
+        //                                     document.getElementById('SelectDistrict')
+        //                                 ))
+        // console.log("city "+validation.selectValidation(
+        //                                     document.getElementById('Selectcity')
+        //                                 ))
+        // console.log("moh "+validation.selectValidation(
+        //                                     document.getElementById('SelectMoh')
+        //                                 ))
+        // console.log("pass1 "+ validation.CheckPassword())
+        // console.log("pass2 "+validation.CheckConformPassword(
+        //                                 document.getElementById('input_password'),
+        //                                 document.getElementById('input_con_password'),
+        //                                 'password_error'
+        //                             ))
+        if(
+            validation.nameValidation(document.getElementById('input_fname').value, 'user-fname-error')==true  &&
+            validation.nameValidation(document.getElementById('input_lname').value,'user-lname-error' )==true &&
+            validation.mobileValidation(document.getElementById('input_mobile').value,'user-mobile-error') ==true &&
+            validation.nicValidation(document.getElementById('input_nic'),'user-nic-error')==true &&
+            validation.selectValidation(document.getElementById('SelectProvince'))==true &&
+            validation.selectValidation(document.getElementById('SelectDistrict'))==true &&
+            validation.selectValidation(document.getElementById('Selectcity'))==true &&
+            validation.selectValidation(document.getElementById('SelectMoh'))==true &&
+            validation.CheckPassword()==true &&
+            validation.CheckConformPassword( document.getElementById('input_password'),document.getElementById('input_con_password'), 'password_error')==true 
+        ) {
+            console.log("correct signup")
+        }
+        else{
+            console.log("incorrect signup")
+        }
+        return false
+
+    }
+</script>
+
+<script>
+    // var mymap = L.map('mapid').setView([7.8731, 80.7718], 10);
+    
+    // const attribution='&copy; <a="href://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    // const tileUrl='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    
+    // const tiles=L.tileLayer(tileUrl,{attribution});
+    // tiles.addTo(mymap);
+    
+    // const api_url='https://apiwheretheiss.at/v1/satellites/25544';
+    
+    
+    // L.marker([7.8731, 80.7718]).addTo(map);
+    
+</script>
+<script>
+    // feather.replace({width: '1.2em', height: '1.2em'})
+</script>
+<script defer>
+    let Province=['Akila','Anjana','Dissanayaka']                                      //using dummy data
+    let Districtarray=['Akilaaaaa','Anjanaaaa','Dissanayakaaaa']
+    let CityArray=['Akilaaaaa','Anjanaaaa','Dissanayakaaaa']
+    let MohArray=['Akilaaaaa','Anjanaaaa','Dissanayakaaaa']
+
+    function fillselect_option(myarray,optionId){
+        // console.log("select is work")
+        myarray.map(user=>{
+                let myOPtion=document.createElement('option');
+                myOPtion.value=user;
+                myOPtion.innerText=user;
+                document.getElementById(optionId).appendChild(myOPtion);
+            })
+    }
+    fillselect_option(Province,'SelectProvince');
+    fillselect_option(Districtarray,'SelectDistrict');
+    fillselect_option(CityArray,'Selectcity');
+    fillselect_option(MohArray,'SelectMoh');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ur-maincontainer{
+    width: 100%;
+    height: 100vh;
+    /* background-color:aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    margin: 0 0 25px 0;
+    height: 4px;
+    background-color: #019686;
+    border-radius: 50px;
+    width: 35px;
+    border: none;
+}
+input{
+    margin-top: 4px;
+    height: 3.8vh;
+}
+.reg-form{
+    /* background-color: blue; */
+    border: 1px solid black;
+    min-height: 80vh;
+    width: 45vw;
+    padding: 15px 25px;
+    box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.1);
+}
+.reg-form .name-row,.mobile-moh,.address-svg,.password,.next-step,.location,.top{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.top{
+    margin-bottom: 0;
+}
+
+/* name row */
+.name-row{
+    /* background-color: aqua; */
+}
+.name-row div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.name-row div input{
+    width: 19.8vw;
+    
+}
+.first-name{
+    /* background-color: blueviolet; */
+}
+.last-name {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* background-color: rgb(255, 208, 0); */
+}
+.last-name div{
+    /* background-color: aqua; */
+    width: 90%;
+}
+
+
+
+/* moh mobileno */
+.mobile-moh{
+    /* background-color: blueviolet; */
+}
+.mobile-moh .mobile{
+    /* background-color: aqua; */
+    width: 40%;
+}
+.mobile-moh .moh{
+    /* background-color: rgb(145, 255, 0); */
+    width: 45%;
+}
+.mobile-moh input{
+    width: 98%;
+}
+
+/* dropdown style */
+/* Dropdown Button */
+.dropbtn {
+    background-color: #019686;
+    color: white;
+    height: 4.7vh;
+    width: 98%;
+    font-size: 0.9em;
+    text-align: left;
+    padding-left: 8px;
+    border: none;
+    position: relative;
+  }
+  .icon-down{
+      position: absolute;
+      right: 3vw;
+      top: 9px;
+      
+  }
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    /* background-color: #3e8e41; */
+    width: 100%;
+    margin-top: 4px;
+  }
+  .city-hide .dropdown{
+      width: 30%;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  a{
+      font-size: 0.7em;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+
+
+
+  /* address 3 part */
+.location{
+    /* background-color: #3e8e41; */
+}
+.location .province,.district,.city{
+    width: 30%;
+}
+.location .icon-down{
+    right: 8px;
+    top:9px
+}
+
+
+
+/* address part  svg */
+.address-svg{
+    /* background-color: brown; */
+    margin-bottom: 0;
+}
+.address{
+    /* background-color: #3e8e41; */
+    width: 50%;
+}
+textarea{
+    width: 100%;
+    height: 75px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    margin-top: 5px;
+    
+}
+.svg{
+    /* background-color: aqua; */
+    padding-top: 5px;
+    width: 40%;
+    /* background-color: #3e8e41; */
+}
+
+
+
+
+/* .password */
+.password{
+    /* background-color: cadetblue; */
+}
+.password div{
+    /* background-color: #3e8e41; */
+    width: 45%
+}
+.password div input{
+    width: 98%;
+}
+
+
+
+
+/* bottom button  */
+.next-step{
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    height: 6vh;
+}
+.next-step-btn{
+  background-color: #019686; 
+  border: none;
+  border-radius: 40px;
+  color: white;
+  /* padding: 1px 0; */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 90%;
+}
+.next-step-btn:hover{
+    /* background-color: #8d1616; */
+}
+.next-step-btn div{
+    /* background-color: #8d1616; */
+    width: 59%;
+    margin-left: auto;
+    position: relative;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.arrow-right{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
+
+
+
+/* sign in */
+.signin{
+    /* background-color: coral; */
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: 600;
+    color: #979797;
+    margin-top: 2px;
+}
+.signin span{
+    font-weight: 800;
+    color: rgba(0, 0, 255, 0.747);
+}
+
+
+
+
+
+@media only screen and (min-width: 791px ){
+    .city-hide{
+        display: none;
+    }
+}
+@media only screen and (max-width: 790px ){
+    .city{
+        display: none;
+    }
+    
+    .location .province,.district{
+        width: 45%;
+    }
+    .city-hide .dropdown{
+        width: 45%;
+    }
+    .icon-down{
+        right: 8px;
+    }
+}
+@media only screen and (max-width: 656px ){
+    .name-row,.mobile-moh,.location,.city-hide,.address-svg,.password{
+        font-size: 0.7em;
+    }
+}
+.next-step .next-step-btn div{
+    font-size: 0.7em;
+}
+@media only screen and (max-width: 463px ){
+    .reg-form .name-row,.mobile-moh,.address-svg,.password,.next-step,.location{
+        flex-direction: column;
+        margin-bottom: 4px;
+    }
+    .top{
+        /* margin-top: 100px; */
+    }
+    input{
+        margin-top: 4px;
+        height: 3vh;
+    }
+    hr{
+        margin-bottom: 7px;
+    }
+    h1{
+        font-size: 1em;
+    }
+    .logo{
+        display: none;
+    }
+    .svg{display: none;}
+    .address{
+        width: 100%;
+    }
+    .name-row div{
+        width: 100%;
+    }
+    .name-row div input{
+        width: 96%;
+    }
+    .mobile-moh .mobile{
+        width: 100%;
+    }
+    .mobile-moh div input{
+        width: 96%;
+    }
+    .mobile-moh .moh{
+        width: 100%;
+    }
+    .location .province,.district{
+        width: 100%;
+    }
+    .city-hide .dropdown{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    textarea{
+        font-size: 1em;
+        height: 9vh;
+        padding: 0;
+        width: 98%;
+    }
+    .password div{
+        width: 100%;
+    }
+    .password div input{
+        width: 96%;
+    }
+    .next-step{
+        width: 98%;
+    }
+    .next-step-btn{
+        margin: auto;
+
+    }
+    .next-step-btn div{
+        float: left;
+        text-align: center;
+        height: 3vh;
+        padding: 2px;
+    }
+    .signin{
+        width: 98%;
+        font-size: 0.55em;
+    }
+    hr{
+        margin-top: 8px;
+    }
+    .arrow-right{
+        right: -43px;
+    }
+}
